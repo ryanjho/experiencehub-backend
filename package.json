@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "nodemon server.js"
+    "start:dev": "nodemon server.js",
+    "reseed-merchants": "mongoimport --jsonArray --db experience-hub --collection merchants --drop --file ./db/seed/merchants.json"
   },
   "repository": {
     "type": "git",
