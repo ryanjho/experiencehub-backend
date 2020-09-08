@@ -1,16 +1,18 @@
 [
     {
-        "name": "Universal Studios",
-        "email": "universal@gmail.com",
-        "password": "universal123",
-        "description": "Universal Studios is the best theme park in Singapore",
-        "logo": "https://upload.wikimedia.org/wikipedia/en/a/a4/Universal_Studios_Singapore_logo.png"
+        "name": "Universal Studios Singapore One-Day Ticket",
+        "price": 88,
+        "image": "https://res.klook.com/image/upload/c_fill,w_960,h_460,f_auto/activities/e2bngqktm95cv3wy7od9.webp",
+        "description": "Enjoy direct entry at Universal Studios Singapore, the only Universal Studios Park in South East Asia and its 20+ attractions!",
+        "address": "Sentosa Island",
+        "merchantId": ""
     },
     {
-        "name": "Refuel Academy",
-        "email": "refuelacademy@gmail.com",
-        "password": "refuelacademy123",
-        "description": "Refuel Academy is a gym and fitness centre that specializes in boxing and Muay Thai classes suitable for patrons from all walks of life",
-        "logo": "https://image-assets.access.myfave.gdn/attachments/dc1b0025ebc4aa34a05a78c31ed7372c388b58c9/store/fill/200/200/8d94b73a3528252b1d095475f19488226ea4a51adf37762b62d2eafdae60/file.jpg"
+        "name": "30 Minutes Muay Thai Boxing",
+        "price": 30,
+        "image": "https://fave-production-main.myfave.gdn/attachments/32057be4fc25ee5579e8fbc2dc7e8f6746f1c04a/store/fill/800/500/b393194506ec0ddbede4aa8423c3f224ac8f672fe5a62754ff6ed77e9b1c/activity_image.jpg",
+        "description": "Add some variety to your usual workout routine and stay fit with a 1-hour fitness class at Refuel Academy. Choose between boxing or Muay Thai and get ready to work up a sweat!",
+        "address": "Lavender St",
+        "merchantId": ""
     }
 ]
