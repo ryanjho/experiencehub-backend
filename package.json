@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "nodemon server.js",
-    "reseed-merchants": "mongoimport --jsonArray --db experience-hub --collection merchants --drop --file ./db/seed/merchants.json"
+    "reseed-merchants": "mongoimport --jsonArray --db experience-hub --collection merchants --drop --file ./db/seed/merchants.json",
+    "reseed-experiences": "mongoimport --jsonArray --db experience-hub --collection experiences --drop --file ./db/seed/experiences.json",
+    "reseed-users": "mongoimport --jsonArray --db experience-hub --collection users --drop --file ./db/seed/users.json"
   },
   "repository": {
     "type": "git",

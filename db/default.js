@@ -2,7 +2,7 @@
 const { MongoClient, connect } = require('mongodb');
 
 // Connection
-const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost:27017';
+const MONGO_URL = process.env.MONGO_URI || 'mongodb://localhost:27017';
 
 // Database Name
 const DB_NAME = process.env.DB_NAME || 'experience-hub';
@@ -22,6 +22,12 @@ module.exports = {
         const connection = await client.connect();
         console.log('Connected to MongoDB');
         const db = connection.db(DB_NAME);
+        
+        // await db.createCollection(COLLECTIONS.USERS);
+        // await db.createCollection(COLLECTIONS.MERCHANTS);
+        // await db.createCollection(COLLECTIONS.EXPERIENCES);
+
+
         this.users = db.collection(COLLECTIONS.USERS);
         this.merchants = db.collection(COLLECTIONS.MERCHANTS);
         this.experiences = db.collection(COLLECTIONS.EXPERIENCES);

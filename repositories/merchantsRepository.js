@@ -1,7 +1,6 @@
 // Dependencies
 const db = require('../db');
 const { ObjectId } = require('mongodb');
-const { create, updateOneById } = require('../controllers/merchantsController');
 
 module.exports = {
     async findAllMerchants() {
@@ -22,7 +21,7 @@ module.exports = {
     async findOneMerchantByEmail(email) {
         try {
             const result = await db.merchants.findOne({ email: email});
-            if (!result) throw new Error(`User with email ${email} does not exist.`);
+            if (!result) throw new Error(`Merchant with email ${email} does not exist.`);
             return result;
         } catch(err) {
             console.log(err);

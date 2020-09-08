@@ -1,0 +1,12 @@
+[
+    {
+        "name": "John Tan",
+        "email": "johntan@gmail.com",
+        "password": "johntan123"
+    },
+    {
+        "name": "Rachel Lim",
+        "email": "rachellim@gmail.com",
+        "password": "rachellim123"
+    }
+]

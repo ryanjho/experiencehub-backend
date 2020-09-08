@@ -1,7 +1,6 @@
 // Dependencies
 const merchantsRepository = require('../repositories/merchantsRepository');
 const httpResponseFormatter = require('../formatters/httpResponse');
-const { deleteOneById } = require('../repositories/merchantsRepository');
 
 module.exports = {
     async getAll(req, res) {
