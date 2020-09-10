@@ -23,7 +23,6 @@ module.exports = {
         req.body.merchantId = ObjectId(req.body.merchantId);
         const newExperience = await experiencesRepository.create(req.body);
         httpResponseFormatter.formatOkResponse(res, newExperience);
-        
     },
 
     async updateOneById(req, res) {

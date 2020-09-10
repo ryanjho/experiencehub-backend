@@ -1,7 +1,5 @@
 const usersRepository = require('../repositories/usersRepository');
 const httpResponseFormatter = require('../formatters/httpResponse');
-const { getOneById } = require('./merchantsController');
-const { create, deleteOneById } = require('../repositories/merchantsRepository');
 
 module.exports = {
     async getAll(req, res) {
