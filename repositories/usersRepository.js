@@ -1,8 +1,6 @@
 // Dependencies
 const db = require('../db');
 const { ObjectId } = require('mongodb');
-const { getOneById } = require('../controllers/merchantsController');
-const { create } = require('./merchantsRepository');
 
 module.exports = {
     async findAllUsers() {

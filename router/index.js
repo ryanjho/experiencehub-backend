@@ -1,8 +1,17 @@
+// Dependencies
 const usersController = require('../controllers/usersController');
 const merchantsController = require('../controllers/merchantsController');
 const experiencesController = require('../controllers/experiencesController');
+const sessionsController = require('../controllers/sessionsController');
 
+// Routes
 module.exports = app => {
+
+    // Session Routes
+    app.post('/merchants/login', sessionsController.merchantLogin);
+    app.get('/merchants/logout', sessionsController.merchantLogout);
+    app.get('/merchants/authentication', sessionsController.checkMerchantAuthentication);
+
 
     // User Routes
     app.get('/users', usersController.getAll);
@@ -25,5 +34,7 @@ module.exports = app => {
     app.post('/experiences', experiencesController.create);
     app.put('/experiences/:id', experiencesController.updateOneById);
     app.delete('/experiences/:id', experiencesController.delete);
+
+    
 }
 

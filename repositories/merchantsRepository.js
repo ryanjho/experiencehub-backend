@@ -21,8 +21,14 @@ module.exports = {
     async findOneMerchantByEmail(email) {
         try {
             const result = await db.merchants.findOne({ email: email});
-            if (!result) throw new Error(`Merchant with email ${email} does not exist.`);
-            return result;
+            if (result) {
+                return result
+            } else {
+                return null;
+            }
+            result ? result : null;
+            // if (!result) throw new Error(`Merchant with email ${email} does not exist.`);
+            // return result;
         } catch(err) {
             console.log(err);
         }
