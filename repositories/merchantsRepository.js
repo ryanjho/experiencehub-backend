@@ -26,7 +26,6 @@ module.exports = {
             } else {
                 return null;
             }
-            result ? result : null;
             // if (!result) throw new Error(`Merchant with email ${email} does not exist.`);
             // return result;
         } catch(err) {

@@ -14,7 +14,9 @@ module.exports = {
     async create(req,res) {
         const check = await usersRepository.findOneUserByEmail(req.body.email);
         if (check) {
-            httpResponseFormatter.formatOkResponse(res, 'Email address is already in use. Please use another one');
+            httpResponseFormatter.formatOkResponse(res, {
+                error: 'Email address is already in use. Please use another one'
+            });
         } else {
             const newUser = await usersRepository.create(req.body);
             httpResponseFormatter.formatOkResponse(res, newUser);

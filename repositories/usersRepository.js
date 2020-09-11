@@ -25,8 +25,15 @@ module.exports = {
     async findOneUserByEmail(email) {
         try {
             const result = await db.users.findOne( { email: email} );
-            if (!result) throw new Error(`User with email ${email} does not exist.`);
-            return result;
+
+            if (result) {
+                return result;
+            } else {
+                return null;
+            }
+
+            // if (!result) throw new Error(`User with email ${email} does not exist.`);
+            // return result;
         } catch(err) {
             console.log(err);
         }
