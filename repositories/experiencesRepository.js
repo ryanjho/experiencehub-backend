@@ -41,6 +41,7 @@ module.exports = {
 
     async updateOneById(id, data) {
         try {
+            console.log('hitting this');
             const { value } = await db.experiences.findOneAndUpdate(
                 { _id: ObjectId(id) },
                 { $set: data },
