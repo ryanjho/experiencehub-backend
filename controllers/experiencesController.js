@@ -26,16 +26,15 @@ module.exports = {
         } catch(err) {
             console.log(err);
         }
-        
     },
 
     async updateOneById(req, res) {
+        req.body.merchantId = ObjectId(req.body.merchantId);
         const result = await experiencesRepository.updateOneById(req.params.id, req.body);
         httpResponseFormatter.formatOkResponse(res, result);
     },
 
     async delete(req,res) {
-        console.log(req.params.id);
         const result = experiencesRepository.deleteOneById(req.params.id);
         httpResponseFormatter.formatOkResponse(res, result);
     }
