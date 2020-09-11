@@ -32,7 +32,7 @@ module.exports = {
 
     async getAllByMerchantId(merchantId) {
         try {
-            const result = await db.experiences.find( { merchantId: ObjectId(merchantId) }).toArray();
+            const result = await db.experiences.find({ merchantId: ObjectId(merchantId)}).toArray();
             return result;
         } catch(err) {
             console.log(err);

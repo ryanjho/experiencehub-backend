@@ -22,6 +22,7 @@ module.exports = app => {
 
     // Merchant Routes
     app.get('/merchants', merchantsController.getAll);
+    app.get('/merchants/:id/experiences', experiencesController.getAllByMerchantId);
     app.get('/merchants/:id', merchantsController.getOneById);
     app.post('/merchants', merchantsController.create);
     app.put('/merchants/:id', merchantsController.updateOneById);
@@ -30,7 +31,6 @@ module.exports = app => {
     // Experience Routes
     app.get('/experiences', experiencesController.getAll);
     app.get('/experiences/:id', experiencesController.getOneById);
-    app.get('/merchants/:id/experiences', experiencesController.getAllByMerchantId);
     app.post('/experiences', experiencesController.create);
     app.put('/experiences/:id', experiencesController.updateOneById);
     app.delete('/experiences/:id', experiencesController.delete);

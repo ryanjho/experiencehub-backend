@@ -2,7 +2,6 @@
 const experiencesRepository = require('../repositories/experiencesRepository');
 const httpResponseFormatter = require('../formatters/httpResponse');
 const { ObjectId } = require('mongodb');
-const { updateOneById } = require('../repositories/merchantsRepository');
 
 module.exports = {
     async getAll(req, res) {
@@ -20,9 +19,14 @@ module.exports = {
     },
 
     async create(req,res) {
-        req.body.merchantId = ObjectId(req.body.merchantId);
-        const newExperience = await experiencesRepository.create(req.body);
-        httpResponseFormatter.formatOkResponse(res, newExperience);
+        try {
+            req.body.merchantId = ObjectId(req.body.merchantId);
+            const newExperience = await experiencesRepository.create(req.body);
+            httpResponseFormatter.formatOkResponse(res, newExperience);
+        } catch(err) {
+            console.log(err);
+        }
+        
     },
 
     async updateOneById(req, res) {
@@ -31,6 +35,7 @@ module.exports = {
     },
 
     async delete(req,res) {
+        console.log(req.params.id);
         const result = experiencesRepository.deleteOneById(req.params.id);
         httpResponseFormatter.formatOkResponse(res, result);
     }
